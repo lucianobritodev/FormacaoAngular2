@@ -8,7 +8,10 @@
 /bazel-out
 
 # dependencies
-/node_modules
+/OlaMundo/node_modules
+/Calculadora/node_modules
+/CadastroProdutosClientes/node_modules
+
 
 # profiling files
 chrome-profiler-events*.json
