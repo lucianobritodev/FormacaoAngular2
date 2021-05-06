@@ -19,7 +19,7 @@ Para rodar o projeto localmente digete o seguinte comando no terminal ainda dent
 ng serve
 ```
 
-Depois abra o navegador no seguinte link: ![](https://localhost:3000)
+Depois abra o navegador no seguinte link: [](https://localhost:3000)
 
 
 ## Contribuidores
