@@ -10,9 +10,16 @@ Projeto criado no curso de Angular 11 da Udemy e tem o objetivo de auxiliar na o
 
 Este é um projeto web e não precisa ser instalado, porém, se quiser baixar e instalar o projeto para testes locais, primeiro certifique-se de que tenha o Node.js e Angular-cli instalados em sua máquina. Segundo, baixe o projeto e descompacte-o, em seguida, abra um terminal no diretório onde baixou e rode o comando a seguir para baixar as dependências do projeto:
 
-**$**```npm install``` 
+```
+npm install
+```
+Para rodar o projeto localmente digete o seguinte comando no terminal ainda dentro do diretório do projeto:
 
+```
+ng serve
+```
 
+Depois abra o navegador no seguinte link: ![](https://localhost:3000)
 
 
 ## Contribuidores
