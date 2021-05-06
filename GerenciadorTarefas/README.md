@@ -1,27 +1,25 @@
-# GerenciadorTarefas
+# Gerenciador de Tarefas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
+![](./src/assets/gerenciador-de-tarefas.png)
 
-## Development server
+## Descrição
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Projeto criado no curso de Angular 11 da Udemy e tem o objetivo de auxiliar na organização de tarefas. Aplicação criada com Angular 11 e possui um CRUD que faz o armazenamento os dados no Local Storage do navegador.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Contributors
 
-## Build
+[Luciano Brito](https://github.com/LucianoAparecidoBritoGuedes/)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Nascido em 1991 em Luziânia-GO, Brasil. Apaixonado por tecnologia e open-source. Graduado em Análise e Desenvolvimento de sistemas pela Universidade Paulista (UNIP) em 2019.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Contacts
 
-## Running end-to-end tests
+- [LinkeIn](https://www.linkedin.com/in/luciano-brito-76379374/)
+- [Gmail](lucianobrito.dev@gmail.com)
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Donates
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclic&hosted_button_id=RXA28WZH3XF4E)
