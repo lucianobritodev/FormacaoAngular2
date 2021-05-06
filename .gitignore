@@ -11,7 +11,7 @@
 /OlaMundo/node_modules
 /Calculadora/node_modules
 /CadastroProdutosClientes/node_modules
-
+/GerenciadorTarefas/node_modules
 
 # profiling files
 chrome-profiler-events*.json
