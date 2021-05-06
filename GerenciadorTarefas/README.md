@@ -6,8 +6,16 @@
 
 Projeto criado no curso de Angular 11 da Udemy e tem o objetivo de auxiliar na organização de tarefas. Aplicação criada com Angular 11 e possui um CRUD que faz o armazenamento os dados no Local Storage do navegador.
 
+## Instalação
 
-## Contributors
+Este é um projeto web e não precisa ser instalado, porém, se quiser baixar e instalar o projeto para testes locais, primeiro certifique-se de que tenha o Node.js e Angular-cli instalados em sua máquina. Segundo, baixe o projeto e descompacte-o, em seguida, abra um terminal no diretório onde baixou e rode o comando a seguir para baixar as dependências do projeto:
+
+**$**```npm install``` 
+
+
+
+
+## Contribuidores
 
 [Luciano Brito](https://github.com/LucianoAparecidoBritoGuedes/)
 
