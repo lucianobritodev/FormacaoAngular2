@@ -11,20 +11,14 @@ export class ListarTarefaComponent implements OnInit {
 
   tarefas: Tarefa[] = [];
 
-   constructor(private TarefaService: TarefaService) { }
+   constructor(private tarefaService: TarefaService) { }
 
   ngOnInit(): void {
     this.tarefas = this.listarTodos();
-    this.tarefas = [
-      new Tarefa(1, 'Curso de HTML5', true),
-      new Tarefa(2, 'Curso de Angular2', true),
-      new Tarefa(3, 'Curso de Java', true),
-      new Tarefa(4, 'Curso de Node.js', false)
-    ];
   }
 
   listarTodos(): Tarefa[] {
-    return this.TarefaService.listarTodos();
+    return this.tarefaService.listarTodos();
   }
 
 }
