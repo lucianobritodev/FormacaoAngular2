@@ -9,8 +9,7 @@
         class="form-control"
         id="nome"
         name="nome"
-        [ngModel]="tarefa.nome | titlecase"
-        (ngModelChange)="tarefa.nome=$event"
+        [(ngModel)]="tarefa.nome"
         #nome="ngModel"
         minlength="5"
         autofocus
