@@ -27,19 +27,22 @@
             <input
               type="checkbox"
               [value]="tarefa.id"
-              [checked]="tarefa.concluida" />
+              [checked]="tarefa.concluida"
+              (click)="alterarStatus(tarefa)" />
           </td>
           <td class="text-center" style="width: 200px">
-            <a title="Editar"
+            <a [routerLink]="['/tarefas/editar', tarefa.id]"
+                title="Editar"
                 alt="Editar"
                 class="btn btn-xs btn-info">
               <i class="fa fa-pencil fa-fw" aria-hidden="true"></i>
             </a>&nbsp;
             <a
               href="#"
-              title="Remover"
-              alt="Remover"
-              class="btn btn-xs btn-danger">
+              title="Excluír"
+              alt="Excluír"
+              class="btn btn-xs btn-danger"
+              (click)="remover($event, tarefa)">
               <i class="fa fa-trash-o fa-fw" aria-hidden="true"></i>
             </a>
           </td>
@@ -48,5 +51,5 @@
     </table>
   </div>
 
-  <p *ngIf="tarefas.length==0">Nenhuma tarefa cadastrada.</p>
+  <p *ngIf="tarefas.length==0">Não há tarefas cadastradas.</p>
 </div>
