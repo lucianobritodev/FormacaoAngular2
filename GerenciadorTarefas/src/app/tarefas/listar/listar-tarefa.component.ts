@@ -10,6 +10,7 @@ import { TarefaService, Tarefa, Mensagens } from '../shared';
 export class ListarTarefaComponent implements OnInit {
 
   tarefas: Tarefa[] = [];
+  concluida = false;
   public mensagens: Mensagens = new Mensagens();
 
    constructor(
@@ -27,7 +28,7 @@ export class ListarTarefaComponent implements OnInit {
   async remover($event: any, tarefa: Tarefa): Promise<void> {
     $event.preventDefault();
     // confirm(`Deseja remover a tarefa ${tarefa.nome} ?`)
-    const result = await this.mensagens.alertYesNo(`Deseja remover a tarefa ${tarefa.nome}?`);
+    const result = await this.mensagens.alertYesNo(`Deseja remover a tarefa ${tarefa.nome}?`, tarefa.nome!);
     if (result) {
       // tslint:disable-next-line: no-non-null-assertion
       this.tarefaService.remover(tarefa.id!);
@@ -37,8 +38,15 @@ export class ListarTarefaComponent implements OnInit {
 
   // tslint:disable-next-line: typedef
   async alterarStatus(tarefa: Tarefa) {
-    const result = await this.mensagens.alertConfirm(`Deseja alterar o status da tarefa ${tarefa.nome}?`);
-    if (result) {
+
+    if (tarefa.concluida === true ) {
+      // tslint:disable-next-line: max-line-length
+      this.concluida = await this.mensagens.alertConfirm(`Deseja alterar o status da tarefa ${tarefa.nome} para não concluída?`, tarefa.nome!);
+    } else {
+      this.concluida = await this.mensagens.alertConfirm(`Deseja alterar o status da tarefa ${tarefa.nome} para concluída?`, tarefa.nome!);
+    }
+
+    if (this.concluida) {
       // tslint:disable-next-line: no-non-null-assertion
       this.tarefaService.alterarStatus(tarefa.id!);
       this.tarefas = this.listarTodos();
