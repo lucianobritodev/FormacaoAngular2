@@ -1,55 +1,72 @@
+import { ValueSansProvider } from '@angular/core';
 import Swal, { SweetAlertResult } from 'sweetalert2';
 
 export class Mensagens {
   // tslint:disable-next-line: typedef
-  async alertConfirm(confirm: string) {
+  async alertConfirm(question: string, nome: string) {
     let res: any;
     await Swal.fire({
       title: 'Você tem certeza?',
-      text: confirm,
+      text: question,
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Sim!',
-      cancelButtonText: 'Não, cancelar!'
+      confirmButtonColor: '#3085d6',
+      cancelButtonText: 'Não, cancelar!',
+      confirmButtonText: 'Sim!'
     }).then((result) => {
       if (result.isConfirmed) {
         res = true;
-        Swal.fire(
-          'Alterado!',
-          'Status da tarefa alterado com sucesso!',
-          'success'
-        );
+        this.alertDone(`Status da tarefa ${nome} foi alterado com sucesso!`);
       } else {
         res = false;
+        this.alertError(`O status da tarefa ${nome} não foi alterado!`);
       }
     });
     return res;
   }
 
-  public alertError(error: string): Promise<SweetAlertResult<any>> {
-    const result = Swal.fire(
-      'Erro!',
-      error,
-      'error');
-    return result;
+  public alertError(error: string): void {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: false,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      }
+    });
+
+    Toast.fire({
+      icon: 'error',
+      title: error
+    });
   }
 
-  public alertDone(message: any): any {
-    const result = Swal.fire({
+  public alertDone(message: string): void {
+    const Toast = Swal.mixin({
+      toast: true,
       position: 'top-end',
-      icon: 'success',
-      title: message,
       showConfirmButton: false,
-      timer: 1500
+      timer: 3000,
+      timerProgressBar: false,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer);
+        toast.addEventListener('mouseleave', Swal.resumeTimer);
+      }
     });
-    return result;
+
+    Toast.fire({
+      icon: 'success',
+      title: message
+    });
   }
 
 
   // tslint:disable-next-line: typedef
-  async alertYesNo(message: string) {
+  async alertYesNo(message: string, nome: string) {
     let res: any;
     const swalWithBootstrapButtons = Swal.mixin({
       customClass: {
@@ -70,20 +87,12 @@ export class Mensagens {
     }).then((result) => {
       if (result.isConfirmed) {
         res = true;
-        swalWithBootstrapButtons.fire(
-          'Excluido!',
-          'Tarefa excluida com sucesso!',
-          'success'
-        );
+        this.alertDone(`Tarefa ${nome} excluida com sucesso!`);
       } else if (
         result.dismiss === Swal.DismissReason.cancel
       ) {
         res = false;
-        swalWithBootstrapButtons.fire(
-          'Cancelado!',
-          'Sua tarefa ainda permanece no sistema! :)',
-          'error'
-        );
+        this.alertError(`Sua tarefa ${nome} ainda permanece no sistema! :)`);
       }
     });
     return res;
