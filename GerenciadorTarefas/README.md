@@ -4,7 +4,7 @@
 
 ## Descrição
 
-Projeto criado no curso de Angular 11 da Udemy e tem o objetivo de auxiliar na organização de tarefas. Aplicação criada com Angular 11 e possui um CRUD que faz o armazenamento os dados no Local Storage do navegador.
+Projeto criado no curso de Angular 11 da Udemy, ministrado por Márcio Casale de Souza e tem como objetivo: auxiliar na organização de tarefas. Esta aplicação foi criada utilizando Angular 11, Typescript, Sweet Alert 2 e Bootstrap 4. Foi utilizado recursos das versões mais recentes do ES6 como Arrow Functions, Promises e Async/Wait. Está aplicação possui um CRUD que faz o armazenamento dos dados no Local Storage do navegador.
 
 ## Instalação
 
