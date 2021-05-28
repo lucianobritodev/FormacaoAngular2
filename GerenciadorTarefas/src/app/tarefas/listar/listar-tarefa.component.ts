@@ -28,6 +28,7 @@ export class ListarTarefaComponent implements OnInit {
   async remover($event: any, tarefa: Tarefa): Promise<void> {
     $event.preventDefault();
     // confirm(`Deseja remover a tarefa ${tarefa.nome} ?`)
+    // tslint:disable-next-line: no-non-null-assertion
     const result = await this.mensagens.alertYesNo(`Deseja remover a tarefa ${tarefa.nome}?`, tarefa.nome!);
     if (result) {
       // tslint:disable-next-line: no-non-null-assertion
@@ -40,9 +41,10 @@ export class ListarTarefaComponent implements OnInit {
   async alterarStatus(tarefa: Tarefa) {
 
     if (tarefa.concluida === true ) {
-      // tslint:disable-next-line: max-line-length
+      // tslint:disable-next-line: max-line-length && no-non-null-assertion
       this.concluida = await this.mensagens.alertConfirm(`Deseja alterar o status da tarefa ${tarefa.nome} para não concluída?`, tarefa.nome!);
     } else {
+      // tslint:disable-next-line: no-non-null-assertion
       this.concluida = await this.mensagens.alertConfirm(`Deseja alterar o status da tarefa ${tarefa.nome} para concluída?`, tarefa.nome!);
     }
 

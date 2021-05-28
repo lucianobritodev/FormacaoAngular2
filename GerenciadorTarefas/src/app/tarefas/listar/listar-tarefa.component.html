@@ -20,6 +20,7 @@
       <tbody>
         <tr *ngFor="let tarefa of tarefas">
           <td
+            [tarefaConcluida]="tarefa.concluida"
             [class.text-secondary]="tarefa.concluida === true">
             {{ tarefa.nome }}
           </td>
