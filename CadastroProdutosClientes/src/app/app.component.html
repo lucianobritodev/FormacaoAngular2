@@ -1,0 +1,106 @@
+<nav
+  class="navbar navbar-expand-lg navbar-dark fixed-top"
+  ng-controller="navigationController as vm"
+>
+  <a class="navbar-brand">Angular 2</a>
+  <button
+    class="navbar-toggler button-menu"
+    data-target="#my-nav"
+    data-toggle="collapse"
+    aria-controls="my-nav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div id="my-nav" class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+<!--       <li class="nav-item">
+        <a
+          [routerLink]="['home']"
+          class="nav-link active"
+          aria-current="page"
+          href="#"
+          >Home</a
+        >
+      </li>
+      <li class="nav-item dropdown">
+        <button
+          type="button button-menu"
+          id="navbarScrollingDropdown"
+          class="btn nav-link dropdown-toggle"
+          role="button"
+          data-toggle="dropdown"
+          data-bs-toggle="dropdown"
+          id="menu-clientes"
+          aria-haspopup="true"
+          aria-expanded="true"
+        >
+          Clientes
+          <span class="caret"></span>
+        </button>
+        <ul
+          class="dropdown-menu dropdown-menu-clientes"
+          aria-labelledby="navbarScrollingDropdown"
+        >
+          <li><a class="dropdown-item" href="#" [routerLink]="['lista-clientes']">Listar Clientes</a></li>
+          <li><a class="dropdown-item" href="#" [routerLink]="['cadastro-clientes']">Cadastrar Clientes</a></li>
+        </ul>
+      </li> -->
+      <li class="nav-item dropdown">
+        <button
+          type="button button-menu"
+          id="navbarScrollingDropdown"
+          class="btn nav-link dropdown-toggle"
+          role="button"
+          data-toggle="dropdown"
+          data-bs-toggle="dropdown"
+          id="menu-produtos"
+          aria-haspopup="true"
+          aria-expanded="true"
+        >
+          Produtos
+          <span class="caret"></span>
+        </button>
+        <ul
+          class="dropdown-menu dropdown-menu-produtos"
+          aria-labelledby="navbarScrollingDropdown"
+        >
+          <li><a class="dropdown-item" href="#" [routerLink]="['lista-produtos']">Listar Produtos</a></li>
+          <li><a class="dropdown-item" href="#" [routerLink]="['cadastro-produtos']">Cadastrar Produtos</a></li>
+        </ul>
+      </li>
+      <li class="nav-item dropdown">
+        <button
+          type="button button-menu"
+          id="navbarScrollingDropdown"
+          class="btn nav-link dropdown-toggle"
+          role="button"
+          data-toggle="dropdown"
+          data-bs-toggle="dropdown"
+          id="menu-produtos"
+          aria-haspopup="true"
+          aria-expanded="true"
+        >
+          Sobre
+          <span class="caret"></span>
+        </button>
+        <ul
+          class="dropdown-menu dropdown-menu-produtos"
+          aria-labelledby="navbarScrollingDropdown"
+        >
+          <li><a class="dropdown-item" href="https://github.com/lucianobritodev">Desenvolvedor</a></li>
+        </ul>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" />
+      <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
+        Search
+      </button>
+    </form>
+  </div>
+</nav>
+
+
+<router-outlet></router-outlet>

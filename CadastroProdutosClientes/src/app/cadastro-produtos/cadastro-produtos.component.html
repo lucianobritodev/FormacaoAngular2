@@ -1,0 +1,126 @@
+<h1 class="h1">Cadastro de Produtos:</h1>
+<div class="cadastro-produtos">
+  <form class="form" for="cadastroForm" name="cadastro" method="post">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td scope="row">
+            <div class="form-group">
+              <label for="id">Id:</label>
+              <input
+                type="text"
+                value="produto.id"
+                [(ngModel)]="produto.id"
+                name="id"
+                id="id"
+                class="form-control"
+                disabled
+              />
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+              <label for="nome">Nome:</label>
+              <input
+                type="text"
+                [(ngModel)]="produto.nome"
+                name="nome"
+                id="nome"
+                class="form-control"
+                maxlength="40"
+                placeholder="Digite o nome do produto"
+                required
+              />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td scope="row">
+            <div class="form-group">
+              <label for="marca">Marca:</label>
+              <input
+                type="text"
+                [(ngModel)]="produto.marca"
+                name="marca"
+                id="marca"
+                class="form-control"
+                placeholder="Digite a marca do produto"
+                required
+              />
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+              <label for="descricao">Descrição:</label>
+              <input
+                type="text"
+                [(ngModel)]="produto.descricao"
+                name="descricao"
+                id="descricao"
+                class="form-control"
+                maxlength="15"
+                placeholder="Digite uma descrição para o produto"
+                required
+              />
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="form-group">
+              <label for="cor">Cor:</label>
+              <input
+                type="text"
+                [(ngModel)]="produto.cor"
+                name="cor"
+                id="cor"
+                class="form-control"
+                placeholder="Digite a cor do produto"
+                required
+              />
+            </div>
+          </td>
+          <td>
+            <div class="form-group">
+              <label for="preco">Preço:</label>
+              <input
+                type="preco"
+                [(ngModel)]="produto.preco"
+                name="preco"
+                id="preco"
+                class="form-control"
+                placeholder="Digite o preço do produto"
+                required
+              />
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="btn-first float-left">
+      <button
+        type="button"
+        class="btn btn-secondary btn-form"
+      >
+        Limpar
+      </button>
+    </div>
+    <div class="float-right">
+      <button
+        type="button"
+        class="btn btn-danger btn-form"
+      >
+        Cancelar
+      </button>
+      <button
+        name="cadastro"
+        type="submit"
+        class="btn btn-success btn-form"
+        (click)="adicionarProduto()"
+      >
+        {{ textButton }}
+      </button>
+    </div>
+  </form>
+</div>

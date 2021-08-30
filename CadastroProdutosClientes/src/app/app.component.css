@@ -1,0 +1,37 @@
+@media (max-width: 991px) {
+  li.dropdown ul.dropdown-menu {
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  
+  }
+}
+
+button:focus {
+
+}
+
+#navbarScrollingDropdown {
+  padding-bottom: 10px;
+}
+
+.dropdown-menu  {
+  margin-top: 8px;
+  background-color: rgba(0, 0, 0, 0.4);
+  position:relative;
+  left: -50%;
+
+}
+
+.dropdown-menu li a {
+  color: #DCDCDC;
+}
+
+.dropdown-menu li a:hover  {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+nav {
+  background-color: rgba(0, 0, 0, 0.4);
+}

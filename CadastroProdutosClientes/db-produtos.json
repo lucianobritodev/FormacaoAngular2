@@ -1,0 +1,34 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Noteboock",
+      "marca": "Dell",
+      "descricao": "i7",
+      "memoria": "8 Gb",
+      "sistema": "Windows 10",
+      "cor": "Preto",
+      "preco": 5500
+    },
+    {
+      "id": 2,
+      "nome": "Noteboock",
+      "marca": "Lenovo",
+      "descricao": "i5",
+      "memoria": "16 Gb",
+      "sistema": "Deepin 20",
+      "cor": "Cinza",
+      "preco": "3500.00"
+    },
+    {
+      "id": 3,
+      "nome": "Noteboock",
+      "marca": "Dell",
+      "descricao": "i7",
+      "memoria": "8 Gb",
+      "sistema": "Windows 10",
+      "cor": "Preto",
+      "preco": 4200
+    }
+  ]
+}

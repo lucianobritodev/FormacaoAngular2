@@ -1,0 +1,5 @@
+### GET / clientes
+GET http://localhost:3000/clientes
+
+### GET / Produtos
+GET http://localhost:3000/produtos

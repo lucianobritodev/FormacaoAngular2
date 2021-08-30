@@ -9,9 +9,19 @@
 
 # dependencies
 /OlaMundo/node_modules
+/OlaMundo/package-lock.json
+
 /Calculadora/node_modules
+/Calculadora/package-lock.json
+
 /CadastroProdutosClientes/node_modules
+/CadastroProdutosClientes/package-lock.json
+
 /GerenciadorTarefas/node_modules
+/GerenciadorTarefas/package-lock.json
+
+/JogoDaVelha/node_modules
+/JogoDaVelha/package-lock.json
 
 # profiling files
 chrome-profiler-events*.json

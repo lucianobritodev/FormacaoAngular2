@@ -1,0 +1,31 @@
+{
+  "clientes":[
+    {
+      "id": 1,
+      "nome": "Marcos",
+      "idade": 29,
+      "telefone": "61996587236"
+    },
+    {
+      "id": 2,
+      "nome": "João",
+      "idade": 29,
+      "telefone": "61996587236"
+    },    {
+      "id": 3,
+      "nome": "Marcelo",
+      "idade": 18,
+      "telefone": "61996587236"
+    },    {
+      "id": 4,
+      "nome": "Maria",
+      "idade": 24,
+      "telefone": "61996587236"
+    },    {
+      "id": 5,
+      "nome": "Marcos",
+      "idade": 35,
+      "telefone": "61996587236"
+    }
+  ]
+}
